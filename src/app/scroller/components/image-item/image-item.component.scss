@@ -1,0 +1,58 @@
+@import "../../../../scss/index.scss";
+
+.photo {
+  width: 180px;
+  height: 250px;
+  border-radius: $spacer/2;
+  border: 1px solid $primary;
+  background-color: $primary;
+  box-shadow: $box-shadow;
+  margin: 0 $spacer/2 $spacer $spacer/2;
+  position: relative;
+
+  transition: 0.2s;
+  overflow: hidden;
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+  &__details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #201c29;
+    opacity: .7;
+    padding: .5em;
+
+    &__title {
+      font-size: 1rem;
+      font-weight: $fw-bold;
+      color: $font-primary;
+      margin-top: 0.5em;
+    }
+
+    &__description {
+      font-size: 0.9rem;
+      color: $font-primary;
+      margin-top: 0.5em;
+      text-align: left;
+      padding: 0 $spacer/2;
+    }
+  }
+
+  &:focus,
+  &:active,
+  &:hover {
+    cursor: pointer;
+    box-shadow: $box-shadow-white;
+    transform: scale(1.1);
+  }
+}
+
+// .cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: flex-start;
+//   margin: $spacer auto;
+// }

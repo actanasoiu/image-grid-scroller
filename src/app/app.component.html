@@ -1,0 +1,9 @@
+<p class="error-msg"
+   [innerHTML]="error$ | async">
+</p>
+
+<router-outlet>
+    <span *ngIf="loading$ | async">
+        <app-loading-spinner></app-loading-spinner>
+    </span>
+</router-outlet>

@@ -1,0 +1,12 @@
+<div class="photo">
+    <img class="photo__image"
+         [src]="data.url"
+         alt="no photo"
+         onError="this.onerror=null; /* to prevent infinite loops */
+             this.src='../../assets/images/no-image.png'; /* default */
+">
+    <div class="photo__details">
+        <div class="photo__details__title">{{data.title}}</div>
+        <div class="photo__details__description">{{data.description}}</div>
+    </div>
+</div>

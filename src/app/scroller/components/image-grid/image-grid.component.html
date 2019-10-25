@@ -1,0 +1,7 @@
+<section class="photo-list">
+    <cdk-virtual-scroll-viewport class="photo-list-viewport"
+                                 [itemSize]="24">
+        <app-image-item *cdkVirtualFor="let photo of photos$ | async"
+                        [data]="photo"></app-image-item>
+    </cdk-virtual-scroll-viewport>
+</section>
